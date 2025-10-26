@@ -15,6 +15,12 @@
 ## Overview
 Implementação em **ARMv7** do **Three-Step Search (8→4→2)** com métrica **SAD** para localizar blocos **8×8** na imagem **Lena 64×64**. Desenha no VGA (RGB565) e marca **blocoA** (branco), **resultado do blocoB** (vermelho) e **gabarito do blocoB** (azul).
 
+<h1 align="center">Lena-3Step-SAD-ARMv7</h1>
+
+<p align="center">
+  <img src="docs/img.png" alt="Resultado no VGA (Lena 64x64 com contornos)" width="720">
+</p>
+
 ## Arquivo principal
 - `busca3p_sad.s` — rotinas `sad`, `busca3p`, desenho no VGA e `main`.
 
