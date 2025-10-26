@@ -48,13 +48,13 @@ main:
     mov r2, #64
     bl  drawGrayBlk
 
-    @ --- Testar blocoA ---
+    @ testa blocoA
     ldr  r0, =blocoA
     mov  r1, #0          @ x_inicial = 0
     mov  r2, #0          @ y_inicial = 0
     bl   busca3p
     
-    @ Desenhar contorno BRANCO na posição encontrada (x em r0, y em r1)
+    @ desenha contorno BRANCO na posição encontrada
     mov  r3, r0          @ r3 = x_encontrado
     mov  r2, r1          @ r2 = y_encontrado (FIX)
     mov  r0, #WHITE      @ r0 = cor
@@ -62,22 +62,21 @@ main:
     bl   drawRectOutline8
 
 
-    @ --- Testar blocoB ---  
-    
-    @ !!! NOVO: Desenha o GABARITO em AZUL na posição correta (8, 32) !!!
-    @      Isto serve para verificar visualmente se a busca acertou.
+    @ testa blocoB   
+	
+    // desenha outline azul de gabarito
     mov  r0, #BLUE
     mov  r1, #8
     mov  r2, #32
     bl   drawRectOutline8
 
-    @ Agora, inicia a busca
+    @ inicia a busca
     ldr  r0, =blocoB
-    mov  r1, #32         @ x_inicial = centro
+    mov  r1, #16         @ x_inicial = centro
     mov  r2, #32         @ y_inicial = centro
     bl   busca3p
 
-    @ Desenhar contorno VERMELHO na posição encontrada (x em r0, y em r1)
+    @ desenha contorno VERMELHO na posição encontrada
     mov  r3, r0          @ r3 = x_encontrado
     mov  r2, r1          @ r2 = y_encontrado (FIX)
     mov  r0, #RED        @ r0 = cor

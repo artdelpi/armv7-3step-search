@@ -18,7 +18,7 @@ Implementação em **ARMv7** do **Three-Step Search (8→4→2)** com métrica *
 <h1 align="center">Lena-3Step-SAD-ARMv7</h1>
 
 <p align="center">
-  <img src="docs/img.png" alt="Resultado no VGA (Lena 64x64 com contornos)" width="720">
+  <img src="docs/img.png" alt="Resultado no VGA (Lena 64x64 com contornos)" width="240">
 </p>
 
 ## Arquivo principal
